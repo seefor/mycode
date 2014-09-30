@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+<h1>This is the default/feed.html template</h1>
+{{items = ['a', 'b', 'c']}}
+<ul>
+{{for item in entries:}}<li>{{=item.title}}<br>{{=A('read more..', _href=(item.link))}}</li>{{pass}}
+</ul>
+<ul>
+{{for item in entries:}}<li>{{=item.link}}</li>{{pass}}
+</ul>
